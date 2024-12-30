@@ -1,8 +1,7 @@
 import { Movie } from '@/types'
 import Image from 'next/image'
-import   getImagePath from '@/lib/getImagePath'
- ''
-
+import getImagePath from '@/lib/getImagePath'
+ 
 function MovieCard({movie}:{movie:Movie}) {
   return (
     <div className='relative flex-shrink-0 cursor-pointer transform hover:scale-105 transition duration-200 ease-out hover:drop-shadow-lg'>
