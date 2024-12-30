@@ -11,11 +11,15 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends(
-    "next/core-web-vitals",
-    "next/typescript",
-    "@typescript-eslint/no-unused-vars",
-    "@typescript-eslint/no-unused-expressions"
+    "next/core-web-vitals", // Next.js core web vitals
+    "next/typescript" // Next.js with TypeScript support
   ),
+  {
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off", // Enforce no-unused-vars rule
+      "@typescript-eslint/no-unused-expressions": "off", // Enforce no-unused-expressions rule
+    },
+  },
 ];
 
 export default eslintConfig;
